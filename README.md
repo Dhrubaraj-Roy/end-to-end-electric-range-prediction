@@ -1,5 +1,5 @@
- python3 -m venv FacilityFinder
- source FacilityFinder/bin/activate
+ python3 -m venv range
+ source range/bin/activate
  data path  = /home/dhruba/gigs_project/project_b/FacilityFinder/data/Facilities_Database.csv
 
 

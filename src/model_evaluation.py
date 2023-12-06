@@ -11,7 +11,7 @@ def evaluate_model(model_file_path, X_test, y_test):
     return mse, r2
 
 def main():
-    csv_file_path = '/home/dhruba/gigs_project/project_b/FacilityFinder/data/processed/processed.csv'
+    csv_file_path = '/home/dhruba/gigs_project/end-to-end-electric-range-prediction/data/processed/processed.csv'
     model_file_path = 'regression.pkl'
 
     df = pd.read_csv(csv_file_path)
