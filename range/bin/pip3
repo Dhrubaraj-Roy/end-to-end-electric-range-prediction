@@ -1,4 +1,4 @@
-#!/home/dhruba/gigs_project/end-to-end-electric-range-prediction/range/bin/python3
+#!/home/dhrubaubuntu/gigs_projects/end-to-end-electric-range-prediction/range/bin/python
 # -*- coding: utf-8 -*-
 import re
 import sys

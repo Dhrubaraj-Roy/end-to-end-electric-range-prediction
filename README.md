@@ -11,3 +11,6 @@
 
 <!-- uvicorn app:app --reload --># end-to-end-electric-range-prediction
 add a new line
+
+ python3 -m virtualenv range
+ source range/bin/activate
