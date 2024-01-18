@@ -1,7 +1,9 @@
  python3 -m venv range
  source range/bin/activate
  data path  = /home/dhruba/gigs_project/project_b/FacilityFinder/data/Facilities_Database.csv
-
+ prefect deployment  build flow.py:my_flow -n range_prediction 
+  prefect deployment apply my_flow-deployment.yaml 
+  prefect agent start -q 'default'
 
  {
   "Postal_Code": 98103,

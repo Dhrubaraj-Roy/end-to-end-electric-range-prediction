@@ -11,7 +11,6 @@ from model.data_cleaning import (
 )
 from prefect.tasks import task_input_hash
 from datetime import timedelta
-# Create a CometML experiment
 experiment = Experiment()
 @task(cache_key_fn=task_input_hash, cache_expiration=timedelta(hours=1))
 def clean_df(data: pd.DataFrame) -> Tuple[

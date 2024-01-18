@@ -1,19 +1,11 @@
+from datetime import timedelta
+from prefect.tasks import task_input_hash
 import logging
 import comet_ml
 import pandas as pd
 from prefect import task, Flow
 from comet_ml import Experiment
 from comet_ml import config
-# import os
-# from comet_ml.config import ConfigIniEnv
-
-
-
-# experiment = comet_ml.Experiment(
-#     api_key=config.get_config()["api_key"],
-#     project_name=config.get_config()["project_name"],
-#     workspace=config.get_config()["workspace"]  
-# )
 experiment = Experiment()
 class IngestData:
     """Ingests data from a CSV file."""
@@ -25,7 +17,7 @@ class IngestData:
         logging.info(f"Ingest data from {self.data_path}")
         return pd.read_csv(self.data_path)
 
-@task
+@task(cache_key_fn=task_input_hash, cache_expiration=timedelta(hours=1))
 def ingest_df(data_path: str) -> pd.DataFrame:
     """
     Ingest data from the specified path and return a DataFrame.
@@ -45,3 +37,6 @@ def ingest_df(data_path: str) -> pd.DataFrame:
     except Exception as e:
         logging.error(f"Error while ingesting data: {e}")
         raise e
+    finally:
+        # Ensure that the experiment is ended to log all data
+        experiment.end()
