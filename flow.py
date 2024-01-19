@@ -4,7 +4,6 @@ from steps. ingest_data import ingest_df
 from steps.clean_data import clean_df
 from steps.train_model import train_model
 from steps.evaluation import evaluate_model
-from pipelines.training_pipeline import train_pipeline
 ## import comet_ml at the top of your file
 from comet_ml import Experiment
 

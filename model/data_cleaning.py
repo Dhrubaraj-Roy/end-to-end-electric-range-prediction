@@ -44,11 +44,11 @@ class DataPreprocessStrategy(DataStrategy):
                 ],
                 axis=1,
             )
-            data["Postal Code"].fillna(data["Postal Code"].median(), inplace=True)
-            data["Model Year"].fillna(data["Model Year"].median(), inplace=True)
-            data["Electric Range"].fillna(data["Electric Range"].median(), inplace=True)
-            data["Base MSRP"].fillna(data["Base MSRP"].median(), inplace=True)
-            data["Legislative District"].fillna(data["Legislative District"].median(), inplace=True)
+            data["Postal_Code"].fillna(data["Postal_Code"].median(), inplace=True)
+            data["Model_Year"].fillna(data["Model_Year"].median(), inplace=True)
+            data["Electric_Range"].fillna(data["Electric_Range"].median(), inplace=True)
+            data["Base_MSRP"].fillna(data["Base_MSRP"].median(), inplace=True)
+            data["Legislative_District"].fillna(data["Legislative_District"].median(), inplace=True)
             
             data = data.select_dtypes(include=[np.number])
            
@@ -69,8 +69,8 @@ class DataDivideStrategy(DataStrategy):
         Divides the data into train and test data.
         """
         try:
-            X = data.drop("Electric Range", axis=1)
-            y = data["Electric Range"]
+            X = data.drop("Electric_Range", axis=1)
+            y = data["Electric_Range"]
             X_train, X_test, y_train, y_test = train_test_split(
                 X, y, test_size=0.2, random_state=42
             )

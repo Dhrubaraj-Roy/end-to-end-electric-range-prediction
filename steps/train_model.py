@@ -1,5 +1,5 @@
-
 import logging
+import pickle
 import pandas as pd
 from sklearn.base import RegressorMixin
 from prefect import task, Flow
@@ -8,6 +8,7 @@ from model.model_dev import LinearRegressionModel
 from .config import ModelNameConfig
 from prefect.tasks import task_input_hash
 from datetime import timedelta
+import joblib
 
 # Create a CometML experiment
 experiment = Experiment()
@@ -37,6 +38,10 @@ def train_model(
         if config.model_name == "linear_regression":
             model = LinearRegressionModel()
             trained_model = model.train(X_train, y_train)
+             # Save the trained model to a file
+            model_filename = "trained_model.pkl"
+            with open(model_filename, 'wb') as model_file:
+                pickle.dump(trained_model, model_file)
             print("train model finished")
             experiment.log_metric("model_training_status", 1)
             return trained_model
@@ -46,6 +51,6 @@ def train_model(
         logging.error(f"Error in train model: {e}")
         raise e
     finally:
-        # Ensure that the experiment is ended to log all data
+    # Ensure that the experiment is ended to log all data
         experiment.end()
 
