@@ -122,11 +122,12 @@ To run the electric vehicle range prediction workflow:
 4. Make predictions using Streamlit app:
 
    - Run `streamlit_app.py` 
-     ```bash
+   ```bash
    streamlit run streamlit_app.py
    ``` 
    - Input vehicle parameters 
    - View predicted range
+   
    ![Streamlit web application](images/streamlit.png)
 
 This covers the end-to-end workflow from data ingestion to generating predictions for custom vehicles. Let me know if any integrations need more clarification! The core components like Prefect, CometML and Streamlit aim to make iterations and experiments simple.
