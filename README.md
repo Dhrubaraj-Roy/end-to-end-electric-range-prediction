@@ -1,6 +1,7 @@
 # End-to-End Electric-Range-Prediction MLOps Project -
 
-![CI & Tests](https://github.com/data42lana/end-to-end-cv-mlops-project/actions/workflows/ci-tests.yml/badge.svg) ![python: 3.9](https://img.shields.io/badge/%20python-3.9-blue) [![pre-commit](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit)](https://github.com/pre-commit/pre-commit) [![security: bandit](https://img.shields.io/badge/security-bandit-yellow.svg)](https://github.com/PyCQA/bandit) 
+![CI & Tests](https://github.com/data42lana/end-to-end-cv-mlops-project/actions/workflows/ci-tests.yml/badge.svg) ![python: 3.11](https://img.shields.io/badge/%20python-3.11-blue)
+ [![pre-commit](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit)](https://github.com/pre-commit/pre-commit) [![security: bandit](https://img.shields.io/badge/security-bandit-yellow.svg)](https://github.com/PyCQA/bandit) 
 > ### The source code and some results of local and also cloud end-to-end implementation of MLOps in practice for an EV Range prediction project, including the source code of the application itself.
 
 <p align="center">
