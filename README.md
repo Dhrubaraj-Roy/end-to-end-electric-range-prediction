@@ -8,7 +8,7 @@
   <a href="#installation">Installation</a> •
   <a href="#configuration">Configuration</a> •
   <a href="#how-to-use">How To Use</a> •
-  <a href="#deploy-on-prefect-cloud">How To Test</a>
+  <a href="#deploy-on-prefect-cloud">Deploy On Prefect Cloud</a>
 </p>
 
 ## About
