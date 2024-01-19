@@ -116,7 +116,8 @@ To run the electric vehicle range prediction workflow:
    - Check for errors or retry failed tasks
    ![Prefect Dashboard](images/Prefect.png)
    - Flow run in Prefect 
-   ![Flow run](image.png)
+   
+   ![Flow run](images/flowrun.png)
 
 4. Make predictions using Streamlit app:
 
