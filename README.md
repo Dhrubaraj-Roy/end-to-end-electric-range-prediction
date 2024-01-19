@@ -127,7 +127,7 @@ To run the electric vehicle range prediction workflow:
    ``` 
    - Input vehicle parameters 
    - View predicted range
-   
+
    ![Streamlit web application](images/streamlit.png)
 
 This covers the end-to-end workflow from data ingestion to generating predictions for custom vehicles. Let me know if any integrations need more clarification! The core components like Prefect, CometML and Streamlit aim to make iterations and experiments simple.
@@ -136,9 +136,10 @@ Some key things that can be tweaked are model parameters, data preprocessing and
 ## Deploy on Prefect Cloud
 To run the flow and model in production, we can deploy to Prefect Cloud.
   - For the deployment we need to build a deployment
-  ```bash
-  prefect deployment  build flow.py:my_flow -n range_prediction
-   ``` ![deployment](images/deployment.png)
+   ```bash
+   prefect deployment  build flow.py:my_flow -n range_prediction
+   ``` 
+   ![deployment](images/deployment.png)
 
    - And need to apply that and this will create a yaml file 
    ```bash
@@ -147,6 +148,6 @@ To run the flow and model in production, we can deploy to Prefect Cloud.
 
   - Prefect agents are responsible for polling Prefect Cloud or a Prefect server for flow runs and executing them within their environment.
    ```bash
-  prefect agent start -q 'default'
+   prefect agent start -q 'default'
    ``` 
 ![Here is the Agent we can see](images/Agent.png)
