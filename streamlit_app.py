@@ -2,7 +2,7 @@ import streamlit as st
 import pickle
 from pydantic import BaseModel
 
-# Define your input data class
+# Define our input data class
 class InputData(BaseModel):
     Postal_Code: int
     Model_Year: int

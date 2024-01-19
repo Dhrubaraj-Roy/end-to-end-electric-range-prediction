@@ -4,3 +4,5 @@ pydantic
 numpy
 joblib
 scikit-learn
+prefect
+comet_ml

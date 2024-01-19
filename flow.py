@@ -8,8 +8,6 @@ from steps.evaluation import evaluate_model
 from comet_ml import Experiment
 
 ## Create an experiment with your api key
-# experiment = Experiment()
-# Define a Prefect Flow
 @flow(retries=3, retry_delay_seconds=5, log_prints=True)
 def my_flow():
     data_path="/home/dhruba/gigs_project/end-to-end-electric-range-prediction/data/raw/part2.csv"
