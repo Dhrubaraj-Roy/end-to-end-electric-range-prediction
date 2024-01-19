@@ -35,7 +35,7 @@ To set up this project locally, follow these steps:
 
 3. Create a virtual environment 
    ```bash
-   python -m venv .venv
+   python3 -m venv .venv
    ```
 
 4. Activate the virtual environment
@@ -55,12 +55,12 @@ To set up this project locally, follow these steps:
    ```bash 
    cp config/config.yaml.example config.yaml
    ```
+  For more see the configuration section
 
-7. Edit `config.yaml` with your system settings
 
-8. Run the Prefect flow
+7. Run the Prefect flow
    ```bash
-   prefect run flow.py
+   python3 flow.py
    ```
 
 The main dependencies used are:
@@ -88,25 +88,6 @@ The keys that can be set here are:
 - **project_name**: The name given to this group of experiments in CometML.
 - **workspace**: Your CometML username or workspace the projects belong to.  
 
-In addition, there is a `config.yaml` file that contains parameters for the ML pipeline itself:
-
-```yaml 
-data_path: data/vehicles.csv
-test_size: 0.2 
-
-model_name: linear_regression
-max_iter: 100
-```
-
-The pipeline specific settings include:
-
-- **data_path**: Location of the training data 
-- **test_size**: Ratio of data allocated to the test set
-- **model_name**: Which regression model to use
-- **max_iter**: Maximum fitting iterations for the model
-
-Using separate config files allows managing settings for CometML logging and the ML pipeline modularly. Parameters can be changed independently without affecting other components.
-
 ## How to Use
 
 To run the electric vehicle range prediction workflow: 
@@ -114,7 +95,7 @@ To run the electric vehicle range prediction workflow:
 1. Execute the Prefect flow by running `flow.py`:
 
    ```bash
-   python flow.py
+   python3 flow.py
    ```
    This will:
    - Ingest the data
