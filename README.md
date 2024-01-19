@@ -136,7 +136,7 @@ To run the flow and model in production, we can deploy to Prefect Cloud.
   - For the deployment we need to build a deployment
   ```bash
   prefect deployment  build flow.py:my_flow -n range_prediction
-   ``` 
+   ``` ![deployment](images/deployment.png)
 
    - And need to apply that and this will create a yaml file 
    ```bash
